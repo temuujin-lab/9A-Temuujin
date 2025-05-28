@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <title>Green Squares Layout</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-end;
+      margin-top: 50px;
+    }
+
+    .column, .grid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .column .box {
+      width: 60px;
+      height: 60px;
+      background-color: green;
+      margin: 5px 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 60px);
+      grid-gap: 10px;
+    }
+
+    .grid .box {
+      width: 60px;
+      height: 60px;
+      background-color: green;
+    }
+
+    .label {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- 400-с доош үе -->
+    <div>
+      <div class="column">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+      <div class="label">400-с доош үе</div>
+    </div>
+
+    <!-- 600-с доош үе -->
+    <div>
+      <div class="grid">
+        <div class="box"></div><div class="box"></div><div class="box"></div>
+        <div class="box"></div><div class="box"></div><div class="box"></div>
+        <div class="box"></div><div class="box"></div><div class="box"></div>
+      </div>
+      <div class="label">600-с доош үе</div>
+    </div>
+
+    <!-- 600-с дээш үе -->
+    <div>
+      <div class="grid">
+        <div class="box"></div><div class="box"></div><div class="box"></div>
+        <div class="box"></div><div class="box"></div><div class="box"></div>
+        <div class="box"></div><div class="box"></div><div class="box"></div>
+      </div>
+      <div class="label">600-с дээш үе</div>
+    </div>
+  </div>
+
+</body>
+</html>
